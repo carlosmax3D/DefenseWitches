@@ -1,0 +1,74 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(255,255,0,0.4);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1.3;
+  font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3";
+  text-shadow: 1px 1px 1px black;
+  background-image: url(info_becky.jpg), url(info_bg.gif);
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, repeat;
+  background-position: right top, left top;
+}
+a {
+  color: #ffea7f;
+}
+header {
+  display: none;
+}
+hr {
+  display: none;
+}
+#container {
+  width: 960px;
+  height: 440px;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+#contents {
+  background: url(info_border.png) repeat-x center 16px;
+  width: 768px;
+  margin: 0 auto;
+  padding: 24px 0 16px;
+}
+article {
+  background: url(info_border.png) repeat-x center bottom;
+  padding: 16px 16px 24px;
+}
+article:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.date {
+  word-wrap: normal;
+  width: 144px;
+  float: left;
+  display: block;
+}
+.detail {
+  width: 584px;
+  float: right;
+  display: block;
+}
+.detail ul {
+  margin: 0;
+  padding: 0;
+}
+.detail li {
+  word-wrap: normal;
+  margin-left: 1em;
+  padding-bottom: 2px;
+}

@@ -1,0 +1,6 @@
+rootProject.name = "DefenseWitches"
+include("app", "plugin")
+
+if (settings.hasProperty('coronaExpansionFileName')) {
+	include("preloadedAssets")
+}

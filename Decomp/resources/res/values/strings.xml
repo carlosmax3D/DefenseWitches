@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="messenger_send_button_text">Send</string>
+    <string name="com_facebook_like_button_not_liked">Like</string>
+    <string name="com_facebook_like_button_liked">Liked</string>
+    <string name="com_facebook_loginview_log_out_button">Log out</string>
+    <string name="com_facebook_loginview_log_in_button">Log in</string>
+    <string name="com_facebook_loginview_log_in_button_long">Log in with Facebook</string>
+    <string name="com_facebook_loginview_logged_in_as">Logged in as: %1$s</string>
+    <string name="com_facebook_loginview_logged_in_using_facebook">Logged in using Facebook</string>
+    <string name="com_facebook_loginview_log_out_action">Log out</string>
+    <string name="com_facebook_loginview_cancel_action">Cancel</string>
+    <string name="com_facebook_loading">Loading...</string>
+    <string name="com_facebook_internet_permission_error_title">AndroidManifest Error</string>
+    <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
+    <string name="com_facebook_tooltip_default">New! You\'re in control - choose what info you want to share with apps.</string>
+    <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
+    <string name="com_facebook_share_button_text">Share</string>
+    <string name="com_facebook_send_button_text">Send</string>
+    <string name="app_name">DW-Native</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_social_networking">SocialNetworkingActivity</string>
+    <string name="title_activity_corona_native">CoronaNativeActivity</string>
+    <string name="facebook_app_id">1433076456986790</string>
+    <string name="Share_twitter">Share Twitter</string>
+    <string name="example" />
+    <string name="title_activity_push_notification">PushNotificationActivity</string>
+    <string name="license_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsHcY5VX0d7xj2Oe6piUw2nJOZWQF/0SMoknbSQCwFCrl86yb0MUj0SHFsY0xCVPZBBmTVUeg16co4iCK5FubTHKWN8+s3adP5dlHtsy2de6pD6ICfMaZ5BObLaoNCjyyQpOiHdiWKSd6iF6k+zY4b1EhVomyXXMzrJlti/haLgm32q06H5ZLbwc21X+5UdVWfQ1ttR0kBalzrvfcWfXIXbZDOjYnKaxI93i6BLjkMMyoV34ZB/naW/X5sVlVMENb3QG7ACMiCxxW6hrUp+Oj9mjPTBvZn3hyUJOeeq76crU/nggFog1xiw99POXLzYH17yMwodkaG6ekC+bTZTfu2wIDAQAB</string>
+    <string name="title_activity_share_email">ShareEmailActivity</string>
+    <string name="inters_ad_skip">skip</string>
+</resources>

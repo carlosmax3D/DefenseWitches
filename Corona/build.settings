@@ -1,0 +1,93 @@
+-- For more information on build.settings, see the Project Build Settings guide at:
+-- https://docs.coronalabs.com/guide/distribution/buildSettings
+--
+settings =
+{
+    orientation =
+    {
+        -- Supported values for orientation:
+        -- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+        default = "landscapeRight",
+        supported = { "landscapeRight", },
+    },
+
+    --
+    -- Android section
+    --
+    android =
+    {
+        usesPermissions =
+        {
+            "android.permission.INTERNET",
+        },
+    },
+
+    --
+    -- iOS section
+    --
+    iphone =
+    {
+        xcassets = "Images.xcassets",
+        plist =
+        {
+            UIStatusBarHidden = false,
+            UILaunchStoryboardName = "LaunchScreen",
+        },
+    },
+
+    --
+    -- Plugins section
+    --
+    plugins =
+    {
+        ["facebook"] = {
+            publisherId = "com.coronalabs",
+        },
+        ["plugin.facebook.v4"] = {
+            publisherId = "com.coronalabs",
+        },
+        ["plugin.google.iap.v3"] = {
+            publisherId = "com.coronalabs",
+        },
+        ["plugin.notifications"] =
+        {
+            publisherId = "com.coronalabs"
+        },
+        ["plugin.gameanalytics"] = {
+            publisherId = "com.gameanalytics",
+        },
+        ["plugin.gameanalytics_v2"] =
+        {
+            publisherId = "com.gameanalytics",
+            supportedPlatforms = {
+                android = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-android.tar.gz" },
+                iphone = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-iphone.tar.gz" },
+                ["iphone-sim"] = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-iphone-sim.tar.gz" },
+                macos = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-mac.tar.gz" },
+                ["mac-sim"] = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-mac.tar.gz" },
+                win32 = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-win.tar.gz" },
+                ["win32-sim"] = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-win.tar.gz" },
+                linux = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-linux.tar.gz" },
+                ["linux-sim"] = { url="https://www.solar2dplugins.com/download/gameanalytics/carlosmax3d/54063373621c52158d2dc707514fa1a191582fd1-linux.tar.gz" },
+            },
+        },
+    },
+
+    --
+    -- Project section
+    --
+    metadata =
+    {
+        appVersion = " ",
+        subscription = " ",
+        mode = " ",
+        userId = " ",
+        appName = " ",
+    },
+    excludeFiles =
+    {
+        -- Exclude unnecessary files for each platform
+        all = { "Icon.png", "Icon-*dpi.png", "Images.xcassets", },
+        android = { "LaunchScreen.storyboardc", },
+    },
+}

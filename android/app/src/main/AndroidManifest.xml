@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="28"
+    android:versionName="1.2.3"
+    android:installLocation="auto">
+    <!--package="jp.newgate.game.android.dw"-->
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33"/>
+    <uses-feature android:glEsVersion="0x00020000"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="jp.newgate.game.android.dw.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MediaStore.createWriteRequest"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MediaStore.createReadRequest"/>
+    <permission android:name="jp.newgate.game.android.dw.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <application android:label="DefenseWitches" android:icon="@drawable/icon" android:name="jp.newgate.game.android.dw.CoronaApplication" android:debuggable="true" android:hardwareAccelerated="true" tools:replace="android:icon,android:name"
+        tools:ignore="HardcodedDebugMode">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="FLUCT_MEDIA_ID" android:value="7aaudnchra"/>
+<!--        <meta-data android:name="com.google.android.gms.version" android:value="4242000"/ -->
+        <meta-data android:name="usesExpansionFile" android:value="true"/>
+        <meta-data android:name="g2metrics_game_id" android:value="07fe479aef0fe42a24bb5b438c83138d"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="ExtendingUI" android:name="jp.newgate.game.android.dw.CoronaNativeGUI" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"
+            tools:ignore="MissingClass" />
+        <activity
+            android:exported="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:label="DefenseWitches" android:name="com.ansca.corona.CoronaActivity" android:launchMode="singleTask" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="usesExpansionFile" android:value="true"/>
+        </activity>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="com.ansca.corona.CameraActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="com.ansca.corona.VideoActivity" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"/>
+        <activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:name="com.ansca.corona.purchasing.StoreActivity" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"/>
+        <activity android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" android:label="@string/title_activity_corona_native" android:name="jp.newgate.game.android.dw.CoronaNativeActivity" tools:replace="android:theme"/>
+        <activity android:label="@string/title_activity_corona_native" android:name="jp.newgate.game.android.dw.InAppPurchaseActivity"/>
+        <activity android:label="@string/title_activity_corona_native" android:name="jp.newgate.game.android.dw.SocialNetworkingActivity"
+            tools:ignore="MissingClass" />
+        <activity android:theme="@android:style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" tools:replace="android:theme,android:configChanges"/>
+        <activity android:name="jp.newgate.game.android.dw.TwitterLoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="x-oauthflow-twitter" android:host="twitterlogin"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" tools:replace="android:theme,android:configChanges"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="jp.co.voyagegroup.android.fluct.jar.FluctInterstitialActivity" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.socdm.d.adgeneration.ADGClickWebView" android:configChanges="keyboardHidden|orientation"
+            tools:ignore="MissingClass" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="jp.tjkapp.adfurikunsdk.AdfurikunIntersAd" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"
+            tools:ignore="MissingClass" />
+        <activity android:theme="@android:style/Theme.NoTitleBar" android:name="jp.tjkapp.adfurikunsdk.AdfurikunWallAd" android:configChanges="keyboardHidden|orientation|screenSize" tools:replace="android:theme,android:configChanges"
+            tools:ignore="MissingClass" />
+        <meta-data android:name="adfurikun_test" android:value="false"/>
+        <activity android:name="com.tapjoy.TJCOffersWebView" android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.tapjoy.TapjoyFullScreenAdWebView" android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.tapjoy.TapjoyVideoView" android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.tapjoy.TJAdUnitView" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true" tools:replace="android:theme,android:configChanges"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.tapjoy.mraid.view.ActionHandler" android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <activity android:name="com.tapjoy.mraid.view.Browser" android:configChanges="keyboardHidden|orientation|screenSize"
+            tools:ignore="MissingClass" />
+        <provider android:name="com.facebook.FacebookContentProvider" android:exported="true" android:authorities="com.facebook.app.FacebookContentProvider1433076456986790"/>
+        <provider android:name="com.ansca.corona.storage.FileContentProvider" android:exported="true" android:authorities="jp.newgate.game.android.dw.files" android:grantUriPermissions="true" tools:replace="android:authorities,android:exported"/>
+        <service android:name="com.ansca.corona.CoronaService"/>
+        <receiver android:name="com.ansca.corona.SystemStartupBroadcastReceiver"
+            android:exported="true" tools:replace="android:exported">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ansca.corona.notifications.AlarmManagerBroadcastReceiver"/>
+        <receiver android:name="com.ansca.corona.notifications.StatusBarBroadcastReceiver"/>
+        <receiver android:name="com.ansca.corona.notifications.GoogleCloudMessagingBroadcastReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" tools:replace="android:exported">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="jp.newgate.game.android.dw"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.ansca.corona.purchasing.GoogleStoreBroadcastReceiver"
+            android:exported="true" tools:replace="android:exported"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.android.vending.billing.IN_APP_NOTIFY"/>
+                <action android:name="com.android.vending.billing.RESPONSE_CODE"/>
+                <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

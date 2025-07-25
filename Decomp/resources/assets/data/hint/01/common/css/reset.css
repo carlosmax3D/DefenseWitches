@@ -1,0 +1,16 @@
+/*====================================*/
+/* reset css
+/*====================================*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, 
+fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
+html { overflow-y:scroll; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal; }
+ol, ul { list-style:none; }
+fieldset, img { border:0; }
+caption, th { text-align:left; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+img { vertical-align:bottom; }
+
+/* html5 */
+article, aside, figure, footer, header, hgroup, nav, section { display:block; margin:0; padding:0; }

@@ -1,0 +1,65 @@
+body{
+	margin: 0;
+	padding: 0;
+	background:url(../img/comic_bg.png);
+}
+
+/* �� ��O�g �� */
+div#contents {
+	width: 482px;
+	height: 302px;
+	margin: 0;
+	padding: 0 17px;
+	/*border:1px solid red;*/
+}
+
+/* �� �r���[ �� */
+div#view {
+	width: 387px;
+	height: 254px;
+	/*border:1px solid blue;*/
+	float:left;
+	overflow:hidden;
+}
+
+
+div#view ul{
+}
+
+/* �� �^�C�g�� �� */
+div#title{
+	font-family:serif;
+	font-size:16px;
+	color:#ffffff;
+	font-weight:bolder;
+	text-shadow: 2px 2px 2px #000000;
+
+	margin: 8px 3px 6px 3px;
+
+}
+
+/* �� �R���g���[�� ��*/
+div#control{
+	width: 77px;
+	/*border:1px solid green;*/
+	float: left;
+	margin-left: 15px;
+	padding-top: 132px;
+}
+
+div#control li#prev{
+	margin-bottom: 10px;
+}
+
+/* �� clearfix �� */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}

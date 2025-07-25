@@ -1,0 +1,9 @@
+// This file contains basic setup for Corona Native apps and plugins
+
+CORONA_ROOT=$HOME/Library/Application Support/Corona/Native
+
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$CORONA_ROOT/Corona/tvos/frameworks/"
+
+HEADER_SEARCH_PATHS = $(inherited) "$CORONA_ROOT/Corona/tvos/frameworks/CoronaCards.xcframework/tvos-arm64/CoronaCards.framework/PrivateHeaders"
+
+BITCODE_GENERATION_MODE = bitcode
